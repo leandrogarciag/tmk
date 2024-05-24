@@ -1,0 +1,64 @@
+<div id="main">
+    <div class="row">
+        <div class="col s12">
+            <div class="container">
+                <div class="section">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <h4 class="card-title" data-i18n="Árbol Bot">REPORTE TMK</h4>
+                                    <button id="download-csv" class="btn">Descargar CSV</button>
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <table id="tuTablaArbolBot" class="display">
+                                                <thead style="color: #fff">
+                                                    <tr class="custom-gradient_black">
+                                                        <th data-i18n="FECHA DE REGISTRO" style="width:10%;">FECHA DE
+                                                            REGISTRO</th>
+                                                        <th data-i18n="FECHA DE MODIFICACION" style="width:10%;">FECHA
+                                                            DE
+                                                            MODIFICACION</th>
+                                                        <th data-i18n="DOCUMENTO" style="width:10%;">DOCUMENTO</th>
+                                                        <th data-i18n="MIN" style="width:8%;">MIN</th>
+                                                        <th data-i18n="PROVEEDOR DONANTE">PROVEEDOR DONANTE</th>
+                                                        <th data-i18n="FECHA SOLICITUD">FECHA SOLICITUD</th>
+                                                        <th data-i18n="FECHA PORTACION">FECHA PORTACION</th>
+                                                        <th data-i18n="ESTADO">ESTADO</th>
+                                                        <th data-i18n="COD. DISTRIBUIDOR">COD. DISTRIBUIDOR</th>
+                                                        <th data-i18n="COD. DISTRIBUIDOR">NOMBRE DISTRIBUIDOR</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {{#each arbol}}
+                                                    <tr
+                                                        style="overflow: hidden; white-space: pre-line; word-break: break-word; min-width:200px; width:30%;">
+                                                        <td>{{this.fecha_registro}}</td>
+                                                        <td>{{this.fecha_modificacion}}</td>
+                                                        <td>{{this.documento}}</td>
+                                                        <td>{{this.min}}</td>
+                                                        <td>{{this.proveedor_donante}}</td>
+                                                        <td>{{this.fecha_solicitud}}</td>
+                                                        <td>{{this.fecha_portacion}}</td>
+                                                        <td>{{this.estado}}</td>
+                                                        <td>{{this.cod_distribuidor}}</td>
+                                                        <td>{{this.nombre_distribuidor}}</td>
+                                                       
+                                                    </tr>
+                                                    {{/each}}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/arbolBot.js"></script>

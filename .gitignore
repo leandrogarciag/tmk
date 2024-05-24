@@ -1,0 +1,7 @@
+*.log
+node_modules/
+WebHookWhasappConnetly/media/
+WebHookWhasappConnetly/receivedFiles/
+logs/
+WebHookWhasappConnetly/
+WEB/src/doc/excel/

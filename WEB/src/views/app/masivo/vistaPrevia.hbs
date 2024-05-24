@@ -1,0 +1,54 @@
+<div id="main">
+  <input id="inpRutaArchivo" type='hidden' value="{{this.rutaArchivo}}">
+  <input id="inpNombreExcel" type='hidden' value="{{this.nombreExcel}}">
+  <input id="inpCodeLanguage" type='hidden' value="">
+  <div class='row'>
+    <div class="col s12" style="margin-bottom: 2rem;">
+      <h4 style='text-align: center;'>Vista previa de registros TKM</h4>
+      <p style='text-align: center;'>
+        <span style="font-weight: bold;">Archivo</span>
+        <b>
+          <span id="nombreExcel" class="#388e3c green-text text-darken-2">{{this.nombreExcel}}</span>
+        </b>
+      </p>
+
+    </div>
+
+    <div class="col s12 m6">
+      <div class='container' style="padding: 2rem;">
+        <div class="container cont-table">
+          <table id='page-length-option' class='striped centered' style="width:100%">
+            <thead>
+              <tr>
+                <th>No. Documento</th>
+                <th>MIN</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each registros}}
+              <tr>
+                <td>{{this.documento}}</td>
+                <td>{{this.min}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          <p style='text-align: center;'>
+            <span style="font-weight: bold;">Total de registros:</span>
+            <b>
+              <span id="totalRegistros">{{this.registros.length}}</span>
+            </b>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 center-align">
+      <button id="btnCargue" class="btn" type="button" style="margin: 2rem; font-weight: 600">
+        Enviar<i class='bx bxs-right-top-arrow-circle'></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src='/js/masivo/vistaPrevia.js'></script>
